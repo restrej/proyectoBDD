@@ -1,11 +1,12 @@
 Meta:
 
 Narrative:
-As a user
-I want to perform an action
-So that I can achieve a business goal
+Envío y recepción de correo electronico en gmail, para validar la información.
 
-Scenario: scenario description
-Given a system state
-When I do something
-Then system is in a different state
+Scenario: Envio y recepcion de correo electronico en gmail
+Given estoy cargando el sitioweb de gmail: https://gmail.com
+When se realiza el inicio de sesion, con el email <correo> y password <pass>
+
+Examples:
+| correo            | pass  |
+| restrej@gmail.com | restre|
