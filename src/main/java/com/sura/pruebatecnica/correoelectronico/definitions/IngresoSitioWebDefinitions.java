@@ -17,8 +17,9 @@ public class IngresoSitioWebDefinitions {
         ingresoSitioWebSteps.accesoAplicativoCorreo(urlSitioWeb);
     }
 
-    @When("se realiza el inicio de sesion, con el email <correo> y password <pass>")
+    @When("voy a iniciar sesion, con el email <correo> y password <pass>")
     public void inicioDesesion(@Named("correo") String email, @Named("pass") String password) {
         ingresoSitioWebSteps.inicioDesesion(email, password);
     }
+
 }

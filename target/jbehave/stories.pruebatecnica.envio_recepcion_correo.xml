@@ -1,0 +1,11 @@
+<story path="stories.pruebatecnica/envio_recepcion_correo.story" title="">
+<scenario keyword="Scenario:" title="Envio y recepcion de correo electronico en gmail">
+<examples keyword="Examples:">
+<step>Given estoy cargando el sitioweb de gmail: https://gmail.com</step>
+<step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+<parameters>
+<names><name>correo</name><name>pass</name></names>
+<values><value>restrej@gmail.com</value><value>restre</value></values>
+</parameters>
+
+<example keyword="Example:">{correo=restrej@gmail.com, pass=restre}</example>

@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>stories.pruebatecnica.envio_recepcion_correo</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories.pruebatecnica/envio_recepcion_correo.story</div>
+<div class="scenario">
+<h2>Scenario: Envio y recepcion de correo electronico en gmail</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given estoy cargando el sitioweb de gmail: https://gmail.com</div>
+<div class="step">When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</div>
+<table>
+<thead>
+<tr>
+<th>correo</th><th>pass</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>restrej@gmail.com</td><td>restre</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {correo=restrej@gmail.com, pass=restre}</h3>
+<div class="step successful">Given estoy cargando el sitioweb de gmail: <span class="step parameter">https://gmail.com</span></div>
+<div class="step failed">When voy a iniciar sesion, con el email <span class="step parameter">restrej@gmail.com</span> y password <span class="step parameter">restre</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 0 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: driver.version: unknown</span></div>
+</div>
+<pre class="failure">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 0 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: driver.version: unknown
+	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:20)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)
+	at com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)
+	at com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:599)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:340)
+...</pre>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
