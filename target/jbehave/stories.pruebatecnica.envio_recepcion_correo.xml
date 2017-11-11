@@ -1,11 +1,20 @@
 <story path="stories.pruebatecnica/envio_recepcion_correo.story" title="">
-<scenario keyword="Scenario:" title="Envio y recepcion de correo electronico en gmail">
+<scenario keyword="Scenario:" title="Loguin al servidor de correo Gmail para (env&#237;o y recepci&#243;n) de informaci&#243;n">
 <examples keyword="Examples:">
 <step>Given estoy cargando el sitioweb de gmail: https://gmail.com</step>
 <step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+<step>And seleccione la opcion de redactar</step>
+<step>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</step>
+<step>And seleccionar la opcion de enviar</step>
+<step>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</step>
 <parameters>
-<names><name>correo</name><name>pass</name></names>
-<values><value>restrej@gmail.com</value><value>restre</value></values>
+<names><name>correo</name><name>pass</name><name>destinatario</name><name>asunto</name><name>descripcion</name><name>mensaje</name></names>
+<values><value>restrej@gmail.com</value><value>restre</value><value>maribelmendez2790@gmail.com</value><value>prueba emvio y recepcion</value><value>Este es un correo de prueba de envio y recepcion de informacion</value><value>Tu mensaje ha sido enviado. Ver el mensaje</value></values>
 </parameters>
 
-<example keyword="Example:">{correo=restrej@gmail.com, pass=restre}</example>
+<example keyword="Example:">{correo=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba emvio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion, mensaje=Tu mensaje ha sido enviado. Ver el mensaje}</example>
+<step outcome="successful">Given estoy cargando el sitioweb de gmail: <parameter>https://gmail.com</parameter></step>
+<step outcome="successful">When voy a iniciar sesion, con el email <parameter>restrej@gmail.com</parameter> y password <parameter>restre</parameter></step>
+<step outcome="successful">And seleccione la opcion de redactar</step>
+<step outcome="successful">And indique el <parameter>maribelmendez2790@gmail.com</parameter>, el <parameter>prueba emvio y recepcion</parameter> y la <parameter>Este es un correo de prueba de envio y recepcion de informacion</parameter> del mensaje</step>
+<step outcome="successful">And seleccionar la opcion de enviar</step>

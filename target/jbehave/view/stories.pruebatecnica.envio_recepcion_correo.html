@@ -10,41 +10,47 @@
 <h1></h1>
 <div class="path">stories.pruebatecnica/envio_recepcion_correo.story</div>
 <div class="scenario">
-<h2>Scenario: Envio y recepcion de correo electronico en gmail</h2>
+<h2>Scenario: Loguin al servidor de correo Gmail para (env&iacute;o y recepci&oacute;n) de informaci&oacute;n</h2>
 <div class="examples">
 <h3>Examples:</h3>
 <div class="step">Given estoy cargando el sitioweb de gmail: https://gmail.com</div>
 <div class="step">When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</div>
+<div class="step">And seleccione la opcion de redactar</div>
+<div class="step">And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</div>
+<div class="step">And seleccionar la opcion de enviar</div>
+<div class="step">Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</div>
 <table>
 <thead>
 <tr>
-<th>correo</th><th>pass</th></tr>
+<th>correo</th><th>pass</th><th>destinatario</th><th>asunto</th><th>descripcion</th><th>mensaje</th></tr>
 </thead>
 <tbody>
 <tr>
-<td>restrej@gmail.com</td><td>restre</td></tr>
+<td>restrej@gmail.com</td><td>restre</td><td>maribelmendez2790@gmail.com</td><td>prueba emvio y recepcion</td><td>Este es un correo de prueba de envio y recepcion de informacion</td><td>Tu mensaje ha sido enviado. Ver el mensaje</td></tr>
 </tbody>
 </table>
 
-<h3 class="example">Example: {correo=restrej@gmail.com, pass=restre}</h3>
+<h3 class="example">Example: {correo=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba emvio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion, mensaje=Tu mensaje ha sido enviado. Ver el mensaje}</h3>
 <div class="step successful">Given estoy cargando el sitioweb de gmail: <span class="step parameter">https://gmail.com</span></div>
-<div class="step failed">When voy a iniciar sesion, con el email <span class="step parameter">restrej@gmail.com</span> y password <span class="step parameter">restre</span> <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<div class="step successful">When voy a iniciar sesion, con el email <span class="step parameter">restrej@gmail.com</span> y password <span class="step parameter">restre</span></div>
+<div class="step successful">And seleccione la opcion de redactar</div>
+<div class="step successful">And indique el <span class="step parameter">maribelmendez2790@gmail.com</span>, el <span class="step parameter">prueba emvio y recepcion</span> y la <span class="step parameter">Este es un correo de prueba de envio y recepcion de informacion</span> del mensaje</div>
+<div class="step successful">And seleccionar la opcion de enviar</div>
+<div class="step failed">Then debe mostrar un mensaje <span class="step parameter">Tu mensaje ha sido enviado. Ver el mensaje</span> indicando que el correo ha sido enviado <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+System info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
 Driver info: driver.version: unknown</span></div>
 </div>
-<pre class="failure">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<pre class="failure">net.serenitybdd.core.exceptions.SerenityManagedException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+System info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
 Driver info: driver.version: unknown
 	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:20)
 	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)
-	at com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)
-	at com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)
+	at com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)
+	at com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)
 	(reflection-invoke)
 	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:599)
 	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:340)

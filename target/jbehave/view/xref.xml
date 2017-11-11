@@ -61,7 +61,7 @@
         </lifecycle>
         <scenarios>
           <scenario>
-            <title>Envio y recepcion de correo electronico en gmail</title>
+            <title>Loguin al servidor de correo Gmail para (envío y recepción) de información</title>
             <meta>
               <properties/>
             </meta>
@@ -102,8 +102,8 @@
               </examplesTable>
             </givenStories>
             <examplesTable>
-              <tableAsString>| correo            | pass  |&#xd;
-| restrej@gmail.com | restre|</tableAsString>
+              <tableAsString>|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |&#xd;
+|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|</tableAsString>
               <headerSeparator>|</headerSeparator>
               <valueSeparator>|</valueSeparator>
               <ignorableSeparator>|--</ignorableSeparator>
@@ -126,6 +126,10 @@
               <headers>
                 <string>correo</string>
                 <string>pass</string>
+                <string>destinatario</string>
+                <string>asunto</string>
+                <string>descripcion</string>
+                <string>mensaje</string>
               </headers>
               <data>
                 <linked-hash-map>
@@ -136,6 +140,22 @@
                   <entry>
                     <string>pass</string>
                     <string>restre</string>
+                  </entry>
+                  <entry>
+                    <string>destinatario</string>
+                    <string>maribelmendez2790@gmail.com</string>
+                  </entry>
+                  <entry>
+                    <string>asunto</string>
+                    <string>prueba emvio y recepcion</string>
+                  </entry>
+                  <entry>
+                    <string>descripcion</string>
+                    <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+                  </entry>
+                  <entry>
+                    <string>mensaje</string>
+                    <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
                   </entry>
                 </linked-hash-map>
               </data>
@@ -151,6 +171,10 @@
             <steps>
               <string>Given estoy cargando el sitioweb de gmail: https://gmail.com</string>
               <string>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</string>
+              <string>And seleccione la opcion de redactar</string>
+              <string>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</string>
+              <string>And seleccionar la opcion de enviar</string>
+              <string>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</string>
             </steps>
           </scenario>
         </scenarios>
@@ -165,7 +189,7 @@ So that </localizedNarrative>
       <scenarios>
         <performableScenario>
           <scenario>
-            <title>Envio y recepcion de correo electronico en gmail</title>
+            <title>Loguin al servidor de correo Gmail para (envío y recepción) de información</title>
             <meta>
               <properties/>
             </meta>
@@ -206,8 +230,8 @@ So that </localizedNarrative>
               </examplesTable>
             </givenStories>
             <examplesTable>
-              <tableAsString>| correo            | pass  |&#xd;
-| restrej@gmail.com | restre|</tableAsString>
+              <tableAsString>|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |&#xd;
+|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|</tableAsString>
               <headerSeparator>|</headerSeparator>
               <valueSeparator>|</valueSeparator>
               <ignorableSeparator>|--</ignorableSeparator>
@@ -230,6 +254,10 @@ So that </localizedNarrative>
               <headers>
                 <string>correo</string>
                 <string>pass</string>
+                <string>destinatario</string>
+                <string>asunto</string>
+                <string>descripcion</string>
+                <string>mensaje</string>
               </headers>
               <data>
                 <linked-hash-map>
@@ -240,6 +268,22 @@ So that </localizedNarrative>
                   <entry>
                     <string>pass</string>
                     <string>restre</string>
+                  </entry>
+                  <entry>
+                    <string>destinatario</string>
+                    <string>maribelmendez2790@gmail.com</string>
+                  </entry>
+                  <entry>
+                    <string>asunto</string>
+                    <string>prueba emvio y recepcion</string>
+                  </entry>
+                  <entry>
+                    <string>descripcion</string>
+                    <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+                  </entry>
+                  <entry>
+                    <string>mensaje</string>
+                    <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
                   </entry>
                 </linked-hash-map>
               </data>
@@ -255,6 +299,10 @@ So that </localizedNarrative>
             <steps>
               <string>Given estoy cargando el sitioweb de gmail: https://gmail.com</string>
               <string>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</string>
+              <string>And seleccione la opcion de redactar</string>
+              <string>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</string>
+              <string>And seleccionar la opcion de enviar</string>
+              <string>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</string>
             </steps>
           </scenario>
           <storyPath>stories.pruebatecnica/envio_recepcion_correo.story</storyPath>
@@ -270,6 +318,22 @@ So that </localizedNarrative>
                   <string>pass</string>
                   <string>restre</string>
                 </entry>
+                <entry>
+                  <string>destinatario</string>
+                  <string>maribelmendez2790@gmail.com</string>
+                </entry>
+                <entry>
+                  <string>asunto</string>
+                  <string>prueba emvio y recepcion</string>
+                </entry>
+                <entry>
+                  <string>descripcion</string>
+                  <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+                </entry>
+                <entry>
+                  <string>mensaje</string>
+                  <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
+                </entry>
               </parameters>
               <givenStories/>
               <beforeSteps>
@@ -282,45 +346,62 @@ So that </localizedNarrative>
                     <step>Given estoy cargando el sitioweb de gmail: https://gmail.com</step>
                     <type>SUCCESSFUL</type>
                     <parametrisedStep>Given estoy cargando el sitioweb de gmail: ｟https://gmail.com｠</parametrisedStep>
-                    <durationInMillis>29901</durationInMillis>
+                    <durationInMillis>12507</durationInMillis>
+                  </successful>
+                  <successful>
+                    <step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+                    <type>SUCCESSFUL</type>
+                    <parametrisedStep>When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠</parametrisedStep>
+                    <durationInMillis>1342</durationInMillis>
+                  </successful>
+                  <successful>
+                    <step>And seleccione la opcion de redactar</step>
+                    <type>SUCCESSFUL</type>
+                    <parametrisedStep>And seleccione la opcion de redactar</parametrisedStep>
+                    <durationInMillis>1613</durationInMillis>
+                  </successful>
+                  <successful>
+                    <step>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</step>
+                    <type>SUCCESSFUL</type>
+                    <parametrisedStep>And indique el ｟maribelmendez2790@gmail.com｠, el ｟prueba emvio y recepcion｠ y la ｟Este es un correo de prueba de envio y recepcion de informacion｠ del mensaje</parametrisedStep>
+                    <durationInMillis>4836</durationInMillis>
+                  </successful>
+                  <successful>
+                    <step>And seleccionar la opcion de enviar</step>
+                    <type>SUCCESSFUL</type>
+                    <parametrisedStep>And seleccionar la opcion de enviar</parametrisedStep>
+                    <durationInMillis>967</durationInMillis>
                   </successful>
                   <failed>
-                    <step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+                    <step>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</step>
                     <type>FAILED</type>
                     <throwable>
-                      <detailMessage>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</detailMessage>
+                      <detailMessage>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</detailMessage>
                       <cause class="net.serenitybdd.core.exceptions.SerenityManagedException">
-                        <detailMessage>org.openqa.selenium.NoSuchElementException: Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                        <detailMessage>org.openqa.selenium.TimeoutException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown</detailMessage>
-                        <cause class="org.openqa.selenium.NoSuchElementException" defined-in="java.lang.Throwable">
-                          <detailMessage>Timed out after 0 seconds. Element not found</detailMessage>
+                        <cause class="org.openqa.selenium.TimeoutException" defined-in="java.lang.Throwable">
+                          <detailMessage>Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169</detailMessage>
                           <stackTrace>
-                            <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)</trace>
-                            <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)</trace>
-                            <trace>net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)</trace>
-                            <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)</trace>
-                            <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)</trace>
-                            <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
-                            <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
-                            <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-                            <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
-                            <trace>net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)</trace>
-                            <trace>com.sun.proxy.$Proxy20.clear(Unknown Source)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(&lt;generated&gt;)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(&lt;generated&gt;)</trace>
+                            <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)</trace>
+                            <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)</trace>
+                            <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)</trace>
+                            <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)</trace>
+                            <trace>net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(&lt;generated&gt;)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(&lt;generated&gt;)</trace>
                             <trace>net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)</trace>
                             <trace>net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)</trace>
                             <trace>net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)</trace>
                             <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)</trace>
                             <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                             <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                            <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                            <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                             <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                             <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                             <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -358,8 +439,8 @@ Driver info: driver.version: unknown</detailMessage>
                           <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                           <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                           <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                           <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -385,35 +466,28 @@ Driver info: driver.version: unknown</detailMessage>
                           <c class="list"/>
                           <list/>
                         </suppressedExceptions>
-                        <detailedMessage>Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                        <detailedMessage>Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown</detailedMessage>
                         <stackTrace>
-                          <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)</trace>
-                          <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)</trace>
-                          <trace>net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)</trace>
-                          <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)</trace>
-                          <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)</trace>
-                          <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
-                          <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
-                          <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-                          <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
-                          <trace>net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)</trace>
-                          <trace>com.sun.proxy.$Proxy20.clear(Unknown Source)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(&lt;generated&gt;)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(&lt;generated&gt;)</trace>
+                          <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)</trace>
+                          <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)</trace>
+                          <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)</trace>
+                          <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)</trace>
+                          <trace>net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(&lt;generated&gt;)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(&lt;generated&gt;)</trace>
                           <trace>net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                           <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                          <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                          <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                           <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                           <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                           <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -435,7 +509,7 @@ Driver info: driver.version: unknown</detailedMessage>
                           <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)</trace>
                           <trace>java.lang.Thread.run(Thread.java:745)</trace>
                         </stackTrace>
-                        <exceptionClass>org.openqa.selenium.NoSuchElementException</exceptionClass>
+                        <exceptionClass>org.openqa.selenium.TimeoutException</exceptionClass>
                       </cause>
                       <stackTrace>
                         <trace>org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:617)</trace>
@@ -459,10 +533,10 @@ Driver info: driver.version: unknown</detailedMessage>
                         <c class="list"/>
                         <list/>
                       </suppressedExceptions>
-                      <uuid>74fc4946-1645-47d2-bb8d-9074acc81830</uuid>
+                      <uuid>8fc31351-44f2-4b0c-aa1d-239b1c0a8805</uuid>
                     </throwable>
-                    <parametrisedStep>When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠</parametrisedStep>
-                    <durationInMillis>738</durationInMillis>
+                    <parametrisedStep>Then debe mostrar un mensaje ｟Tu mensaje ha sido enviado. Ver el mensaje｠ indicando que el correo ha sido enviado</parametrisedStep>
+                    <durationInMillis>17419</durationInMillis>
                   </failed>
                 </results>
               </steps>
@@ -473,7 +547,7 @@ Driver info: driver.version: unknown</detailedMessage>
                 <properties/>
               </storyAndScenarioMeta>
               <scenario>
-                <title>Envio y recepcion de correo electronico en gmail</title>
+                <title>Loguin al servidor de correo Gmail para (envío y recepción) de información</title>
                 <meta>
                   <properties/>
                 </meta>
@@ -514,8 +588,8 @@ Driver info: driver.version: unknown</detailedMessage>
                   </examplesTable>
                 </givenStories>
                 <examplesTable>
-                  <tableAsString>| correo            | pass  |&#xd;
-| restrej@gmail.com | restre|</tableAsString>
+                  <tableAsString>|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |&#xd;
+|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|</tableAsString>
                   <headerSeparator>|</headerSeparator>
                   <valueSeparator>|</valueSeparator>
                   <ignorableSeparator>|--</ignorableSeparator>
@@ -538,6 +612,10 @@ Driver info: driver.version: unknown</detailedMessage>
                   <headers>
                     <string>correo</string>
                     <string>pass</string>
+                    <string>destinatario</string>
+                    <string>asunto</string>
+                    <string>descripcion</string>
+                    <string>mensaje</string>
                   </headers>
                   <data>
                     <linked-hash-map>
@@ -548,6 +626,22 @@ Driver info: driver.version: unknown</detailedMessage>
                       <entry>
                         <string>pass</string>
                         <string>restre</string>
+                      </entry>
+                      <entry>
+                        <string>destinatario</string>
+                        <string>maribelmendez2790@gmail.com</string>
+                      </entry>
+                      <entry>
+                        <string>asunto</string>
+                        <string>prueba emvio y recepcion</string>
+                      </entry>
+                      <entry>
+                        <string>descripcion</string>
+                        <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+                      </entry>
+                      <entry>
+                        <string>mensaje</string>
+                        <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
                       </entry>
                     </linked-hash-map>
                   </data>
@@ -563,6 +657,10 @@ Driver info: driver.version: unknown</detailedMessage>
                 <steps>
                   <string>Given estoy cargando el sitioweb de gmail: https://gmail.com</string>
                   <string>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</string>
+                  <string>And seleccione la opcion de redactar</string>
+                  <string>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</string>
+                  <string>And seleccionar la opcion de enviar</string>
+                  <string>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</string>
                 </steps>
               </scenario>
             </examplePerformableScenario>
@@ -573,7 +671,7 @@ Driver info: driver.version: unknown</detailedMessage>
       <beforeSteps/>
       <afterSteps/>
       <timing>
-        <durationInMillis>31241</durationInMillis>
+        <durationInMillis>53897</durationInMillis>
       </timing>
       <givenStory>false</givenStory>
     </performableStory>
@@ -581,7 +679,7 @@ Driver info: driver.version: unknown</detailedMessage>
   <scenarios>
     <performableScenario>
       <scenario>
-        <title>Envio y recepcion de correo electronico en gmail</title>
+        <title>Loguin al servidor de correo Gmail para (envío y recepción) de información</title>
         <meta>
           <properties/>
         </meta>
@@ -622,8 +720,8 @@ Driver info: driver.version: unknown</detailedMessage>
           </examplesTable>
         </givenStories>
         <examplesTable>
-          <tableAsString>| correo            | pass  |&#xd;
-| restrej@gmail.com | restre|</tableAsString>
+          <tableAsString>|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |&#xd;
+|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|</tableAsString>
           <headerSeparator>|</headerSeparator>
           <valueSeparator>|</valueSeparator>
           <ignorableSeparator>|--</ignorableSeparator>
@@ -646,6 +744,10 @@ Driver info: driver.version: unknown</detailedMessage>
           <headers>
             <string>correo</string>
             <string>pass</string>
+            <string>destinatario</string>
+            <string>asunto</string>
+            <string>descripcion</string>
+            <string>mensaje</string>
           </headers>
           <data>
             <linked-hash-map>
@@ -656,6 +758,22 @@ Driver info: driver.version: unknown</detailedMessage>
               <entry>
                 <string>pass</string>
                 <string>restre</string>
+              </entry>
+              <entry>
+                <string>destinatario</string>
+                <string>maribelmendez2790@gmail.com</string>
+              </entry>
+              <entry>
+                <string>asunto</string>
+                <string>prueba emvio y recepcion</string>
+              </entry>
+              <entry>
+                <string>descripcion</string>
+                <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+              </entry>
+              <entry>
+                <string>mensaje</string>
+                <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
               </entry>
             </linked-hash-map>
           </data>
@@ -671,6 +789,10 @@ Driver info: driver.version: unknown</detailedMessage>
         <steps>
           <string>Given estoy cargando el sitioweb de gmail: https://gmail.com</string>
           <string>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</string>
+          <string>And seleccione la opcion de redactar</string>
+          <string>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</string>
+          <string>And seleccionar la opcion de enviar</string>
+          <string>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</string>
         </steps>
       </scenario>
       <storyPath>stories.pruebatecnica/envio_recepcion_correo.story</storyPath>
@@ -686,6 +808,22 @@ Driver info: driver.version: unknown</detailedMessage>
               <string>pass</string>
               <string>restre</string>
             </entry>
+            <entry>
+              <string>destinatario</string>
+              <string>maribelmendez2790@gmail.com</string>
+            </entry>
+            <entry>
+              <string>asunto</string>
+              <string>prueba emvio y recepcion</string>
+            </entry>
+            <entry>
+              <string>descripcion</string>
+              <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+            </entry>
+            <entry>
+              <string>mensaje</string>
+              <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
+            </entry>
           </parameters>
           <givenStories/>
           <beforeSteps>
@@ -698,45 +836,62 @@ Driver info: driver.version: unknown</detailedMessage>
                 <step>Given estoy cargando el sitioweb de gmail: https://gmail.com</step>
                 <type>SUCCESSFUL</type>
                 <parametrisedStep>Given estoy cargando el sitioweb de gmail: ｟https://gmail.com｠</parametrisedStep>
-                <durationInMillis>29901</durationInMillis>
+                <durationInMillis>12507</durationInMillis>
+              </successful>
+              <successful>
+                <step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+                <type>SUCCESSFUL</type>
+                <parametrisedStep>When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠</parametrisedStep>
+                <durationInMillis>1342</durationInMillis>
+              </successful>
+              <successful>
+                <step>And seleccione la opcion de redactar</step>
+                <type>SUCCESSFUL</type>
+                <parametrisedStep>And seleccione la opcion de redactar</parametrisedStep>
+                <durationInMillis>1613</durationInMillis>
+              </successful>
+              <successful>
+                <step>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</step>
+                <type>SUCCESSFUL</type>
+                <parametrisedStep>And indique el ｟maribelmendez2790@gmail.com｠, el ｟prueba emvio y recepcion｠ y la ｟Este es un correo de prueba de envio y recepcion de informacion｠ del mensaje</parametrisedStep>
+                <durationInMillis>4836</durationInMillis>
+              </successful>
+              <successful>
+                <step>And seleccionar la opcion de enviar</step>
+                <type>SUCCESSFUL</type>
+                <parametrisedStep>And seleccionar la opcion de enviar</parametrisedStep>
+                <durationInMillis>967</durationInMillis>
               </successful>
               <failed>
-                <step>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</step>
+                <step>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</step>
                 <type>FAILED</type>
                 <throwable>
-                  <detailMessage>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</detailMessage>
+                  <detailMessage>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</detailMessage>
                   <cause class="net.serenitybdd.core.exceptions.SerenityManagedException">
-                    <detailMessage>org.openqa.selenium.NoSuchElementException: Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                    <detailMessage>org.openqa.selenium.TimeoutException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown</detailMessage>
-                    <cause class="org.openqa.selenium.NoSuchElementException" defined-in="java.lang.Throwable">
-                      <detailMessage>Timed out after 0 seconds. Element not found</detailMessage>
+                    <cause class="org.openqa.selenium.TimeoutException" defined-in="java.lang.Throwable">
+                      <detailMessage>Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169</detailMessage>
                       <stackTrace>
-                        <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)</trace>
-                        <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)</trace>
-                        <trace>net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)</trace>
-                        <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)</trace>
-                        <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)</trace>
-                        <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
-                        <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
-                        <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-                        <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
-                        <trace>net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)</trace>
-                        <trace>com.sun.proxy.$Proxy20.clear(Unknown Source)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(&lt;generated&gt;)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(&lt;generated&gt;)</trace>
+                        <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)</trace>
+                        <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)</trace>
+                        <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)</trace>
+                        <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)</trace>
+                        <trace>net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(&lt;generated&gt;)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(&lt;generated&gt;)</trace>
                         <trace>net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)</trace>
                         <trace>net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)</trace>
                         <trace>net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)</trace>
                         <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)</trace>
                         <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                         <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                        <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                        <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                         <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                         <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                         <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -774,8 +929,8 @@ Driver info: driver.version: unknown</detailMessage>
                       <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                       <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                       <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                       <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -801,35 +956,28 @@ Driver info: driver.version: unknown</detailMessage>
                       <c class="list"/>
                       <list/>
                     </suppressedExceptions>
-                    <detailedMessage>Timed out after 0 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+                    <detailedMessage>Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: driver.version: unknown</detailedMessage>
                     <stackTrace>
-                      <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)</trace>
-                      <trace>net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)</trace>
-                      <trace>net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)</trace>
-                      <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)</trace>
-                      <trace>net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)</trace>
-                      <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
-                      <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
-                      <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
-                      <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
-                      <trace>net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)</trace>
-                      <trace>com.sun.proxy.$Proxy20.clear(Unknown Source)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(&lt;generated&gt;)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(&lt;generated&gt;)</trace>
+                      <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)</trace>
+                      <trace>net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)</trace>
+                      <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)</trace>
+                      <trace>net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)</trace>
+                      <trace>net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(&lt;generated&gt;)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(&lt;generated&gt;)</trace>
                       <trace>net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)</trace>
                       <trace>net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(&lt;generated&gt;)</trace>
-                      <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(&lt;generated&gt;)</trace>
+                      <trace>com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)</trace>
                       <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
                       <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
                       <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
@@ -851,7 +999,7 @@ Driver info: driver.version: unknown</detailedMessage>
                       <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)</trace>
                       <trace>java.lang.Thread.run(Thread.java:745)</trace>
                     </stackTrace>
-                    <exceptionClass>org.openqa.selenium.NoSuchElementException</exceptionClass>
+                    <exceptionClass>org.openqa.selenium.TimeoutException</exceptionClass>
                   </cause>
                   <stackTrace>
                     <trace>org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:617)</trace>
@@ -875,10 +1023,10 @@ Driver info: driver.version: unknown</detailedMessage>
                     <c class="list"/>
                     <list/>
                   </suppressedExceptions>
-                  <uuid>74fc4946-1645-47d2-bb8d-9074acc81830</uuid>
+                  <uuid>8fc31351-44f2-4b0c-aa1d-239b1c0a8805</uuid>
                 </throwable>
-                <parametrisedStep>When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠</parametrisedStep>
-                <durationInMillis>738</durationInMillis>
+                <parametrisedStep>Then debe mostrar un mensaje ｟Tu mensaje ha sido enviado. Ver el mensaje｠ indicando que el correo ha sido enviado</parametrisedStep>
+                <durationInMillis>17419</durationInMillis>
               </failed>
             </results>
           </steps>
@@ -889,7 +1037,7 @@ Driver info: driver.version: unknown</detailedMessage>
             <properties/>
           </storyAndScenarioMeta>
           <scenario>
-            <title>Envio y recepcion de correo electronico en gmail</title>
+            <title>Loguin al servidor de correo Gmail para (envío y recepción) de información</title>
             <meta>
               <properties/>
             </meta>
@@ -930,8 +1078,8 @@ Driver info: driver.version: unknown</detailedMessage>
               </examplesTable>
             </givenStories>
             <examplesTable>
-              <tableAsString>| correo            | pass  |&#xd;
-| restrej@gmail.com | restre|</tableAsString>
+              <tableAsString>|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |&#xd;
+|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|</tableAsString>
               <headerSeparator>|</headerSeparator>
               <valueSeparator>|</valueSeparator>
               <ignorableSeparator>|--</ignorableSeparator>
@@ -954,6 +1102,10 @@ Driver info: driver.version: unknown</detailedMessage>
               <headers>
                 <string>correo</string>
                 <string>pass</string>
+                <string>destinatario</string>
+                <string>asunto</string>
+                <string>descripcion</string>
+                <string>mensaje</string>
               </headers>
               <data>
                 <linked-hash-map>
@@ -964,6 +1116,22 @@ Driver info: driver.version: unknown</detailedMessage>
                   <entry>
                     <string>pass</string>
                     <string>restre</string>
+                  </entry>
+                  <entry>
+                    <string>destinatario</string>
+                    <string>maribelmendez2790@gmail.com</string>
+                  </entry>
+                  <entry>
+                    <string>asunto</string>
+                    <string>prueba emvio y recepcion</string>
+                  </entry>
+                  <entry>
+                    <string>descripcion</string>
+                    <string>Este es un correo de prueba de envio y recepcion de informacion</string>
+                  </entry>
+                  <entry>
+                    <string>mensaje</string>
+                    <string>Tu mensaje ha sido enviado. Ver el mensaje</string>
                   </entry>
                 </linked-hash-map>
               </data>
@@ -979,6 +1147,10 @@ Driver info: driver.version: unknown</detailedMessage>
             <steps>
               <string>Given estoy cargando el sitioweb de gmail: https://gmail.com</string>
               <string>When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</string>
+              <string>And seleccione la opcion de redactar</string>
+              <string>And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</string>
+              <string>And seleccionar la opcion de enviar</string>
+              <string>Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</string>
             </steps>
           </scenario>
         </examplePerformableScenario>

@@ -1,6 +1,6 @@
 #org.jbehave.core.embedder.StoryManager
-#Thu Nov 09 13:38:11 COT 2017
-stories.pruebatecnica/envio_recepcion_correo.story=31000
+#Fri Nov 10 20:04:31 COT 2017
+stories.pruebatecnica/envio_recepcion_correo.story=54000
 threads=1
-total=31000
-threadAverage=31000
+total=54000
+threadAverage=54000

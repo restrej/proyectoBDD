@@ -16,7 +16,28 @@ public class IngresoSitioWebSteps {
     }
 
     @Step
-    public void inicioDesesion(String usuario, String contrasenia) {
-        ingresoSitioWebPages.inicioDesesion(usuario, contrasenia);
+    public void inicioDeSesion(String usuario, String contrasenia) {
+        ingresoSitioWebPages.inicioDeSesion(usuario, contrasenia);
     }
+
+    @Step
+    public void redactarCorreo(){
+        ingresoSitioWebPages.redactarCorreo();
+    }
+
+    @Step
+    public void datosCorreo(String email, String asunto, String descripcion){
+        ingresoSitioWebPages.datosCorreo(email, asunto, descripcion);
+    }
+
+    @Step
+    public void enviarCorreo(){
+        ingresoSitioWebPages.enviarCorreo();
+    }
+
+    @Step
+    public void validarMensajeCorreo(String mensaje) {
+        ingresoSitioWebPages.validarMensajeCorreo(mensaje);
+    }
+
 }

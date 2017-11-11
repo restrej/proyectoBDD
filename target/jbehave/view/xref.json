@@ -70,7 +70,7 @@
         },
         "scenarios": [
           {
-            "title": "Envio y recepcion de correo electronico en gmail",
+            "title": "Loguin al servidor de correo Gmail para (envío y recepción) de información",
             "meta": {
               "properties": []
             },
@@ -120,7 +120,7 @@
               }
             },
             "examplesTable": {
-              "tableAsString": "| correo            | pass  |\r\n| restrej@gmail.com | restre|",
+              "tableAsString": "|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |\r\n|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|",
               "headerSeparator": "|",
               "valueSeparator": "|",
               "ignorableSeparator": "|--",
@@ -142,7 +142,11 @@
               },
               "headers": [
                 "correo",
-                "pass"
+                "pass",
+                "destinatario",
+                "asunto",
+                "descripcion",
+                "mensaje"
               ],
               "data": [
                 [
@@ -153,6 +157,22 @@
                   [
                     "pass",
                     "restre"
+                  ],
+                  [
+                    "destinatario",
+                    "maribelmendez2790@gmail.com"
+                  ],
+                  [
+                    "asunto",
+                    "prueba emvio y recepcion"
+                  ],
+                  [
+                    "descripcion",
+                    "Este es un correo de prueba de envio y recepcion de informacion"
+                  ],
+                  [
+                    "mensaje",
+                    "Tu mensaje ha sido enviado. Ver el mensaje"
                   ]
                 ]
               ],
@@ -176,7 +196,11 @@
             },
             "steps": [
               "Given estoy cargando el sitioweb de gmail: https://gmail.com",
-              "When voy a iniciar sesion, con el email <correo> y password <pass>"
+              "When voy a iniciar sesion, con el email <correo> y password <pass>",
+              "And seleccione la opcion de redactar",
+              "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+              "And seleccionar la opcion de enviar",
+              "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado"
             ]
           }
         ],
@@ -189,7 +213,7 @@
       "scenarios": [
         {
           "scenario": {
-            "title": "Envio y recepcion de correo electronico en gmail",
+            "title": "Loguin al servidor de correo Gmail para (envío y recepción) de información",
             "meta": {
               "properties": []
             },
@@ -239,7 +263,7 @@
               }
             },
             "examplesTable": {
-              "tableAsString": "| correo            | pass  |\r\n| restrej@gmail.com | restre|",
+              "tableAsString": "|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |\r\n|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|",
               "headerSeparator": "|",
               "valueSeparator": "|",
               "ignorableSeparator": "|--",
@@ -261,7 +285,11 @@
               },
               "headers": [
                 "correo",
-                "pass"
+                "pass",
+                "destinatario",
+                "asunto",
+                "descripcion",
+                "mensaje"
               ],
               "data": [
                 [
@@ -272,6 +300,22 @@
                   [
                     "pass",
                     "restre"
+                  ],
+                  [
+                    "destinatario",
+                    "maribelmendez2790@gmail.com"
+                  ],
+                  [
+                    "asunto",
+                    "prueba emvio y recepcion"
+                  ],
+                  [
+                    "descripcion",
+                    "Este es un correo de prueba de envio y recepcion de informacion"
+                  ],
+                  [
+                    "mensaje",
+                    "Tu mensaje ha sido enviado. Ver el mensaje"
                   ]
                 ]
               ],
@@ -295,7 +339,11 @@
             },
             "steps": [
               "Given estoy cargando el sitioweb de gmail: https://gmail.com",
-              "When voy a iniciar sesion, con el email <correo> y password <pass>"
+              "When voy a iniciar sesion, con el email <correo> y password <pass>",
+              "And seleccione la opcion de redactar",
+              "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+              "And seleccionar la opcion de enviar",
+              "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado"
             ]
           },
           "storyPath": "stories.pruebatecnica/envio_recepcion_correo.story",
@@ -310,6 +358,22 @@
                 [
                   "pass",
                   "restre"
+                ],
+                [
+                  "destinatario",
+                  "maribelmendez2790@gmail.com"
+                ],
+                [
+                  "asunto",
+                  "prueba emvio y recepcion"
+                ],
+                [
+                  "descripcion",
+                  "Este es un correo de prueba de envio y recepcion de informacion"
+                ],
+                [
+                  "mensaje",
+                  "Tu mensaje ha sido enviado. Ver el mensaje"
                 ]
               ],
               "givenStories": [],
@@ -323,44 +387,62 @@
                     "step": "Given estoy cargando el sitioweb de gmail: https://gmail.com",
                     "type": "SUCCESSFUL",
                     "parametrisedStep": "Given estoy cargando el sitioweb de gmail: ｟https://gmail.com｠",
-                    "durationInMillis": 29901
+                    "durationInMillis": 12507
                   },
                   {
                     "step": "When voy a iniciar sesion, con el email <correo> y password <pass>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠",
+                    "durationInMillis": 1342
+                  },
+                  {
+                    "step": "And seleccione la opcion de redactar",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "And seleccione la opcion de redactar",
+                    "durationInMillis": 1613
+                  },
+                  {
+                    "step": "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "And indique el ｟maribelmendez2790@gmail.com｠, el ｟prueba emvio y recepcion｠ y la ｟Este es un correo de prueba de envio y recepcion de informacion｠ del mensaje",
+                    "durationInMillis": 4836
+                  },
+                  {
+                    "step": "And seleccionar la opcion de enviar",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "And seleccionar la opcion de enviar",
+                    "durationInMillis": 967
+                  },
+                  {
+                    "step": "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado",
                     "type": "FAILED",
                     "throwable": {
-                      "detailMessage": "When voy a iniciar sesion, con el email <correo> y password <pass>",
+                      "detailMessage": "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado",
                       "cause": {
                         "@class": "net.serenitybdd.core.exceptions.SerenityManagedException",
-                        "detailMessage": "org.openqa.selenium.NoSuchElementException: Timed out after 0 seconds. Element not found\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
+                        "detailMessage": "org.openqa.selenium.TimeoutException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
                         "cause": {
-                          "@class": "org.openqa.selenium.NoSuchElementException",
+                          "@class": "org.openqa.selenium.TimeoutException",
                           "@defined-in": "java.lang.Throwable",
-                          "detailMessage": "Timed out after 0 seconds. Element not found",
+                          "detailMessage": "Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169",
                           "stackTrace": [
-                            "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)",
-                            "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)",
-                            "net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)",
-                            "net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)",
-                            "net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)",
-                            "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
-                            "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
-                            "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
-                            "java.lang.reflect.Method.invoke(Method.java:498)",
-                            "net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)",
-                            "com.sun.proxy.$Proxy20.clear(Unknown Source)",
-                            "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)",
-                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)",
-                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(<generated>)",
-                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(<generated>)",
+                            "net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)",
+                            "net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)",
+                            "net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)",
+                            "net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)",
+                            "net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)",
+                            "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)",
+                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)",
+                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(<generated>)",
+                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(<generated>)",
                             "net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)",
                             "net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)",
                             "net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)",
                             "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)",
                             "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                             "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                            "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                            "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                            "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                             "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                             "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                             "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -398,8 +480,8 @@
                           "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)",
                           "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                           "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                          "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                          "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                           "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                           "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                           "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -425,31 +507,25 @@
                           [],
                           []
                         ],
-                        "detailedMessage": "Timed out after 0 seconds. Element not found\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
+                        "detailedMessage": "Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
                         "stackTrace": [
-                          "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)",
-                          "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)",
-                          "net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)",
-                          "net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)",
-                          "net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)",
-                          "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
-                          "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
-                          "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
-                          "java.lang.reflect.Method.invoke(Method.java:498)",
-                          "net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)",
-                          "com.sun.proxy.$Proxy20.clear(Unknown Source)",
-                          "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)",
-                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)",
-                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(<generated>)",
-                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(<generated>)",
+                          "net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)",
+                          "net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)",
+                          "net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)",
+                          "net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)",
+                          "net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)",
+                          "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)",
+                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)",
+                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(<generated>)",
+                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(<generated>)",
                           "net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)",
                           "net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)",
                           "net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)",
                           "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)",
                           "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                           "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                          "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                          "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                          "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                           "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                           "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                           "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -471,7 +547,7 @@
                           "java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)",
                           "java.lang.Thread.run(Thread.java:745)"
                         ],
-                        "exceptionClass": "org.openqa.selenium.NoSuchElementException"
+                        "exceptionClass": "org.openqa.selenium.TimeoutException"
                       },
                       "stackTrace": [
                         "org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:617)",
@@ -495,10 +571,10 @@
                         [],
                         []
                       ],
-                      "uuid": "74fc4946-1645-47d2-bb8d-9074acc81830"
+                      "uuid": "8fc31351-44f2-4b0c-aa1d-239b1c0a8805"
                     },
-                    "parametrisedStep": "When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠",
-                    "durationInMillis": 738
+                    "parametrisedStep": "Then debe mostrar un mensaje ｟Tu mensaje ha sido enviado. Ver el mensaje｠ indicando que el correo ha sido enviado",
+                    "durationInMillis": 17419
                   }
                 ]
               },
@@ -509,7 +585,7 @@
                 "properties": []
               },
               "scenario": {
-                "title": "Envio y recepcion de correo electronico en gmail",
+                "title": "Loguin al servidor de correo Gmail para (envío y recepción) de información",
                 "meta": {
                   "properties": []
                 },
@@ -559,7 +635,7 @@
                   }
                 },
                 "examplesTable": {
-                  "tableAsString": "| correo            | pass  |\r\n| restrej@gmail.com | restre|",
+                  "tableAsString": "|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |\r\n|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|",
                   "headerSeparator": "|",
                   "valueSeparator": "|",
                   "ignorableSeparator": "|--",
@@ -581,7 +657,11 @@
                   },
                   "headers": [
                     "correo",
-                    "pass"
+                    "pass",
+                    "destinatario",
+                    "asunto",
+                    "descripcion",
+                    "mensaje"
                   ],
                   "data": [
                     [
@@ -592,6 +672,22 @@
                       [
                         "pass",
                         "restre"
+                      ],
+                      [
+                        "destinatario",
+                        "maribelmendez2790@gmail.com"
+                      ],
+                      [
+                        "asunto",
+                        "prueba emvio y recepcion"
+                      ],
+                      [
+                        "descripcion",
+                        "Este es un correo de prueba de envio y recepcion de informacion"
+                      ],
+                      [
+                        "mensaje",
+                        "Tu mensaje ha sido enviado. Ver el mensaje"
                       ]
                     ]
                   ],
@@ -615,7 +711,11 @@
                 },
                 "steps": [
                   "Given estoy cargando el sitioweb de gmail: https://gmail.com",
-                  "When voy a iniciar sesion, con el email <correo> y password <pass>"
+                  "When voy a iniciar sesion, con el email <correo> y password <pass>",
+                  "And seleccione la opcion de redactar",
+                  "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+                  "And seleccionar la opcion de enviar",
+                  "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado"
                 ]
               }
             }
@@ -626,7 +726,7 @@
       "beforeSteps": {},
       "afterSteps": {},
       "timing": {
-        "durationInMillis": 31241
+        "durationInMillis": 53897
       },
       "givenStory": false
     }
@@ -634,7 +734,7 @@
   "scenarios": [
     {
       "scenario": {
-        "title": "Envio y recepcion de correo electronico en gmail",
+        "title": "Loguin al servidor de correo Gmail para (envío y recepción) de información",
         "meta": {
           "properties": []
         },
@@ -684,7 +784,7 @@
           }
         },
         "examplesTable": {
-          "tableAsString": "| correo            | pass  |\r\n| restrej@gmail.com | restre|",
+          "tableAsString": "|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |\r\n|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|",
           "headerSeparator": "|",
           "valueSeparator": "|",
           "ignorableSeparator": "|--",
@@ -706,7 +806,11 @@
           },
           "headers": [
             "correo",
-            "pass"
+            "pass",
+            "destinatario",
+            "asunto",
+            "descripcion",
+            "mensaje"
           ],
           "data": [
             [
@@ -717,6 +821,22 @@
               [
                 "pass",
                 "restre"
+              ],
+              [
+                "destinatario",
+                "maribelmendez2790@gmail.com"
+              ],
+              [
+                "asunto",
+                "prueba emvio y recepcion"
+              ],
+              [
+                "descripcion",
+                "Este es un correo de prueba de envio y recepcion de informacion"
+              ],
+              [
+                "mensaje",
+                "Tu mensaje ha sido enviado. Ver el mensaje"
               ]
             ]
           ],
@@ -740,7 +860,11 @@
         },
         "steps": [
           "Given estoy cargando el sitioweb de gmail: https://gmail.com",
-          "When voy a iniciar sesion, con el email <correo> y password <pass>"
+          "When voy a iniciar sesion, con el email <correo> y password <pass>",
+          "And seleccione la opcion de redactar",
+          "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+          "And seleccionar la opcion de enviar",
+          "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado"
         ]
       },
       "storyPath": "stories.pruebatecnica/envio_recepcion_correo.story",
@@ -755,6 +879,22 @@
             [
               "pass",
               "restre"
+            ],
+            [
+              "destinatario",
+              "maribelmendez2790@gmail.com"
+            ],
+            [
+              "asunto",
+              "prueba emvio y recepcion"
+            ],
+            [
+              "descripcion",
+              "Este es un correo de prueba de envio y recepcion de informacion"
+            ],
+            [
+              "mensaje",
+              "Tu mensaje ha sido enviado. Ver el mensaje"
             ]
           ],
           "givenStories": [],
@@ -768,44 +908,62 @@
                 "step": "Given estoy cargando el sitioweb de gmail: https://gmail.com",
                 "type": "SUCCESSFUL",
                 "parametrisedStep": "Given estoy cargando el sitioweb de gmail: ｟https://gmail.com｠",
-                "durationInMillis": 29901
+                "durationInMillis": 12507
               },
               {
                 "step": "When voy a iniciar sesion, con el email <correo> y password <pass>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠",
+                "durationInMillis": 1342
+              },
+              {
+                "step": "And seleccione la opcion de redactar",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "And seleccione la opcion de redactar",
+                "durationInMillis": 1613
+              },
+              {
+                "step": "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "And indique el ｟maribelmendez2790@gmail.com｠, el ｟prueba emvio y recepcion｠ y la ｟Este es un correo de prueba de envio y recepcion de informacion｠ del mensaje",
+                "durationInMillis": 4836
+              },
+              {
+                "step": "And seleccionar la opcion de enviar",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "And seleccionar la opcion de enviar",
+                "durationInMillis": 967
+              },
+              {
+                "step": "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado",
                 "type": "FAILED",
                 "throwable": {
-                  "detailMessage": "When voy a iniciar sesion, con el email <correo> y password <pass>",
+                  "detailMessage": "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado",
                   "cause": {
                     "@class": "net.serenitybdd.core.exceptions.SerenityManagedException",
-                    "detailMessage": "org.openqa.selenium.NoSuchElementException: Timed out after 0 seconds. Element not found\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
+                    "detailMessage": "org.openqa.selenium.TimeoutException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
                     "cause": {
-                      "@class": "org.openqa.selenium.NoSuchElementException",
+                      "@class": "org.openqa.selenium.TimeoutException",
                       "@defined-in": "java.lang.Throwable",
-                      "detailMessage": "Timed out after 0 seconds. Element not found",
+                      "detailMessage": "Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169",
                       "stackTrace": [
-                        "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)",
-                        "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)",
-                        "net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)",
-                        "net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)",
-                        "net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)",
-                        "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
-                        "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
-                        "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
-                        "java.lang.reflect.Method.invoke(Method.java:498)",
-                        "net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)",
-                        "com.sun.proxy.$Proxy20.clear(Unknown Source)",
-                        "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)",
-                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)",
-                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(<generated>)",
-                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(<generated>)",
+                        "net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)",
+                        "net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)",
+                        "net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)",
+                        "net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)",
+                        "net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)",
+                        "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)",
+                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)",
+                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(<generated>)",
+                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(<generated>)",
                         "net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)",
                         "net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)",
                         "net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)",
                         "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)",
                         "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                         "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                        "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                        "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                        "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                         "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                         "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                         "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -843,8 +1001,8 @@
                       "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:341)",
                       "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                       "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                      "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                      "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                       "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                       "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                       "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -870,31 +1028,25 @@
                       [],
                       []
                     ],
-                    "detailedMessage": "Timed out after 0 seconds. Element not found\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '127.0.0.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
+                    "detailedMessage": "Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169\nBuild info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'\nSystem info: host: 'QV22', ip: '10.214.18.142', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'\nDriver info: driver.version: unknown",
                     "stackTrace": [
-                      "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.ajaxFindElement(SmartAjaxElementLocator.java:150)",
-                      "net.thucydides.core.annotations.locators.SmartAjaxElementLocator.findElement(SmartAjaxElementLocator.java:102)",
-                      "net.serenitybdd.core.pages.WebElementResolverByElementLocator.resolveForDriver(WebElementResolverByElementLocator.java:27)",
-                      "net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:177)",
-                      "net.serenitybdd.core.pages.WebElementFacadeImpl.clear(WebElementFacadeImpl.java:1027)",
-                      "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
-                      "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
-                      "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
-                      "java.lang.reflect.Method.invoke(Method.java:498)",
-                      "net.thucydides.core.annotations.locators.AbstractSingleItemHandler.invoke(AbstractSingleItemHandler.java:45)",
-                      "com.sun.proxy.$Proxy20.clear(Unknown Source)",
-                      "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.inicioDesesion(IngresoSitioWebPages.java:43)",
-                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.inicioDesesion(IngresoSitioWebSteps.java:20)",
-                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.CGLIB$inicioDesesion$0(<generated>)",
-                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b$$FastClassByCGLIB$$1489f065.invoke(<generated>)",
+                      "net.thucydides.core.scheduling.ThucydidesFluentWait.timeoutException(ThucydidesFluentWait.java:123)",
+                      "net.thucydides.core.scheduling.ThucydidesFluentWait.until(ThucydidesFluentWait.java:75)",
+                      "net.serenitybdd.core.pages.RenderedPageObjectView.waitForElement(RenderedPageObjectView.java:114)",
+                      "net.serenitybdd.core.pages.RenderedPageObjectView.waitFor(RenderedPageObjectView.java:104)",
+                      "net.serenitybdd.core.pages.PageObject.waitFor(PageObject.java:1023)",
+                      "com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78)",
+                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40)",
+                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.CGLIB$validarMensajeCorreo$1(<generated>)",
+                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd$$FastClassByCGLIB$$be5a5816.invoke(<generated>)",
                       "net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)",
                       "net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:372)",
                       "net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:357)",
                       "net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:332)",
                       "net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:134)",
                       "net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:61)",
-                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$eac2bf0b.inicioDesesion(<generated>)",
-                      "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.inicioDesesion(IngresoSitioWebDefinitions.java:22)",
+                      "com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps$$EnhancerByCGLIB$$b0d091dd.validarMensajeCorreo(<generated>)",
+                      "com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)",
                       "sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
                       "sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)",
                       "sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
@@ -916,7 +1068,7 @@
                       "java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)",
                       "java.lang.Thread.run(Thread.java:745)"
                     ],
-                    "exceptionClass": "org.openqa.selenium.NoSuchElementException"
+                    "exceptionClass": "org.openqa.selenium.TimeoutException"
                   },
                   "stackTrace": [
                     "org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:617)",
@@ -940,10 +1092,10 @@
                     [],
                     []
                   ],
-                  "uuid": "74fc4946-1645-47d2-bb8d-9074acc81830"
+                  "uuid": "8fc31351-44f2-4b0c-aa1d-239b1c0a8805"
                 },
-                "parametrisedStep": "When voy a iniciar sesion, con el email ｟restrej@gmail.com｠ y password ｟restre｠",
-                "durationInMillis": 738
+                "parametrisedStep": "Then debe mostrar un mensaje ｟Tu mensaje ha sido enviado. Ver el mensaje｠ indicando que el correo ha sido enviado",
+                "durationInMillis": 17419
               }
             ]
           },
@@ -954,7 +1106,7 @@
             "properties": []
           },
           "scenario": {
-            "title": "Envio y recepcion de correo electronico en gmail",
+            "title": "Loguin al servidor de correo Gmail para (envío y recepción) de información",
             "meta": {
               "properties": []
             },
@@ -1004,7 +1156,7 @@
               }
             },
             "examplesTable": {
-              "tableAsString": "| correo            | pass  |\r\n| restrej@gmail.com | restre|",
+              "tableAsString": "|correo           |pass  |destinatario               |asunto                  |descripcion                                                    |mensaje                                   |\r\n|restrej@gmail.com|restre|maribelmendez2790@gmail.com|prueba emvio y recepcion|Este es un correo de prueba de envio y recepcion de informacion|Tu mensaje ha sido enviado. Ver el mensaje|",
               "headerSeparator": "|",
               "valueSeparator": "|",
               "ignorableSeparator": "|--",
@@ -1026,7 +1178,11 @@
               },
               "headers": [
                 "correo",
-                "pass"
+                "pass",
+                "destinatario",
+                "asunto",
+                "descripcion",
+                "mensaje"
               ],
               "data": [
                 [
@@ -1037,6 +1193,22 @@
                   [
                     "pass",
                     "restre"
+                  ],
+                  [
+                    "destinatario",
+                    "maribelmendez2790@gmail.com"
+                  ],
+                  [
+                    "asunto",
+                    "prueba emvio y recepcion"
+                  ],
+                  [
+                    "descripcion",
+                    "Este es un correo de prueba de envio y recepcion de informacion"
+                  ],
+                  [
+                    "mensaje",
+                    "Tu mensaje ha sido enviado. Ver el mensaje"
                   ]
                 ]
               ],
@@ -1060,7 +1232,11 @@
             },
             "steps": [
               "Given estoy cargando el sitioweb de gmail: https://gmail.com",
-              "When voy a iniciar sesion, con el email <correo> y password <pass>"
+              "When voy a iniciar sesion, con el email <correo> y password <pass>",
+              "And seleccione la opcion de redactar",
+              "And indique el <destinatario>, el <asunto> y la <descripcion> del mensaje",
+              "And seleccionar la opcion de enviar",
+              "Then debe mostrar un mensaje <mensaje> indicando que el correo ha sido enviado"
             ]
           }
         }
