@@ -37,7 +37,7 @@ public class IngresoSitioWebPages extends PageObject {
     private WebElementFacade campoCuerpoMensaje;
     @FindBy(xpath = ".//*[text()='Enviar']")
     private WebElementFacade btnEnviar;
-    @FindBy(xpath = ".//*[@id='']")
+    @FindBy(xpath = ".//div[contains(.,'Tu mensaje ha sido enviado.')")
     private WebElementFacade mensajeValidacionCorreo;
 
 
@@ -75,6 +75,7 @@ public class IngresoSitioWebPages extends PageObject {
     }
 
     public void validarMensajeCorreo(String mensaje){
+        waitFor(mensajeValidacionCorreo);
         MatcherAssert.assertThat(mensajeValidacionCorreo.getText(), Is.is(Matchers.equalTo(mensaje)));
     }
 }
