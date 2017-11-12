@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Envio recepcion correo","Loguin al servidor de correo gmail para (envío y recepción) de información","SUCCESS","2017-11-12T00:55:31.130-05:00","0.0","35.82"
+"Envio recepcion correo","Recepción de correo electronico en la bandeja de entrada gmail","SUCCESS","2017-11-12T00:56:07.000-05:00","0.0","10.04"
+"Envio recepcion correo","Redacción Correo (Envío en borrador)","PENDING","2017-11-12T00:56:23.403-05:00","0.0","0.02"
+"Envio recepcion correo","Redacción Correo con copia Oculta Cco (Envío)","PENDING","2017-11-12T00:56:19.331-05:00","0.0","0.02"
+"Envio recepcion correo","Redacción Correo con copias Cc (Envío)","PENDING","2017-11-12T00:56:17.051-05:00","0.0","0.03"
+"Envio recepcion correo","Redacción Correo con dato adjunto (Envío)","PENDING","2017-11-12T00:56:23.319-05:00","0.0","0.02"

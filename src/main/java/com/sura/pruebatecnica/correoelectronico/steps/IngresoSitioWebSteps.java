@@ -1,6 +1,7 @@
 package com.sura.pruebatecnica.correoelectronico.steps;
 
 import com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages;
+import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import org.fluentlenium.core.annotation.Page;
@@ -36,8 +37,28 @@ public class IngresoSitioWebSteps {
     }
 
     @Step
-    public void validarMensajeCorreo(String mensaje) {
-        ingresoSitioWebPages.validarMensajeCorreo(mensaje);
+    public void opcionCuentaGoogle(){
+        ingresoSitioWebPages.opcionCuentaGoogle();
+    }
+
+    @Step
+    public void cerrarSesion(){
+        ingresoSitioWebPages.cerrarSesion();
+    }
+
+    @Step
+    public void correoPrincipal(){
+        ingresoSitioWebPages.correoPrincipal();
+    }
+
+    @Step
+    public void opcionOtraCuenta(){
+        ingresoSitioWebPages.opcionOtraCuenta();
+    }
+
+    @Step
+    public void validarMensaje(){
+        ingresoSitioWebPages.validarMensaje();
     }
 
 }

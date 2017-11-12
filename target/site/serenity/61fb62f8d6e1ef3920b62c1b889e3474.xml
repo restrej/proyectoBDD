@@ -1,0 +1,67 @@
+<acceptance-test-run title="Recepción de correo electronico en la bandeja de entrada gmail" name="Recepción de correo electronico en la bandeja de entrada gmail" steps="4" successful="4" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="10992" timestamp="2017-11-12T01:32:57.455-05:00" session-id="7133ef443ae227e294366e5d75734145">
+  <user-story id="envio_recepcion_correo" name="Envio recepcion correo" path="stories.pruebatecnica/envio_recepcion_correo.story"/>
+  <tags>
+    <tag name="Envio recepcion correo" type="story"/>
+  </tags>
+  <examples>
+    <datasets>
+      <dataset startRow="0" rowCount="0"/>
+    </datasets>
+    <headers>
+      <header>correoRemitente</header>
+      <header>pass</header>
+    </headers>
+    <rows>
+      <row result="SUCCESS">
+        <value>maribelmendez2790@gmail.com</value>
+        <value>maribel27</value>
+      </row>
+    </rows>
+  </examples>
+  <test-group name="[1] {correoRemitente=maribelmendez2790@gmail.com, pass=maribel27}" result="SUCCESS">
+    <test-group name="Given estoy cargando el sitioweb de gmail: {https://gmail.com}" result="SUCCESS">
+      <screenshots>
+        <screenshot image="82d62152113744af617e126d25734bc0.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="1468">
+        <screenshots>
+          <screenshot image="b4a3230f61575d2484fd3ed31a312371.png"/>
+        </screenshots>
+        <description>Acceso aplicativo correo: https://gmail.com</description>
+      </test-step>
+    </test-group>
+    <test-group name="When voy a seleccionar la opcion de usar otra cuenta" result="SUCCESS">
+      <screenshots>
+        <screenshot image="8b93fb1eedcb5c4df5acbee81f94eca4.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="1380">
+        <screenshots>
+          <screenshot image="33870102c80c7207132f8c238afe8a8c.png"/>
+        </screenshots>
+        <description>Opcion otra cuenta</description>
+      </test-step>
+    </test-group>
+    <test-group name="And voy a iniciar sesion con correo destinatario, con el email {maribelmendez2790@gmail.com} y password {maribel27}" result="SUCCESS">
+      <screenshots>
+        <screenshot image="82ed1a520ed4513000710a17797405b6.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="1628">
+        <screenshots>
+          <screenshot image="7d2c82742d85ece39e58ed4566dc4d4e.png"/>
+        </screenshots>
+        <description>Inicio de sesion: maribelmendez2790@gmail.com, maribel27</description>
+      </test-step>
+    </test-group>
+    <test-group name="Then se debe mostrar el asunto del mensaje y descripcion del cuerpo del mensaje" result="SUCCESS">
+      <screenshots>
+        <screenshot image="c1916c8998d4e3dd574413cf3e8b4a1e.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="742">
+        <screenshots>
+          <screenshot image="ffde2e8cbab0fa1d54a7383dc80fdab1.png"/>
+        </screenshots>
+        <description>Validar mensaje</description>
+      </test-step>
+    </test-group>
+  </test-group>
+</acceptance-test-run>

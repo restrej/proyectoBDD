@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.sura.pruebatecnica.EnvioRecepcionCorreo
+-------------------------------------------------------------------------------
+Tests run: 51, Failures: 0, Errors: 0, Skipped: 30, Time elapsed: 57.145 sec - in com.sura.pruebatecnica.EnvioRecepcionCorreo

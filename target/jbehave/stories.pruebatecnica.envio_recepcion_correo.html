@@ -2,29 +2,285 @@
 <h1></h1>
 <div class="path">stories.pruebatecnica/envio_recepcion_correo.story</div>
 <div class="scenario">
-<h2>Scenario: Loguin al servidor de correo Gmail para (env&iacute;o y recepci&oacute;n) de informaci&oacute;n</h2>
+<h2>Scenario: Loguin al servidor de correo gmail para (env&iacute;o y recepci&oacute;n) de informaci&oacute;n</h2>
 <div class="examples">
 <h3>Examples:</h3>
 <div class="step">Given estoy cargando el sitioweb de gmail: https://gmail.com</div>
-<div class="step">When voy a iniciar sesion, con el email &lt;correo&gt; y password &lt;pass&gt;</div>
+<div class="step">When voy a iniciar sesion, con el email &lt;correoRemitente&gt; y password &lt;pass&gt;</div>
 <div class="step">And seleccione la opcion de redactar</div>
 <div class="step">And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje</div>
 <div class="step">And seleccionar la opcion de enviar</div>
-<div class="step">Then debe mostrar un mensaje &lt;mensaje&gt; indicando que el correo ha sido enviado</div>
+<div class="step">Then debe mostrar una notificacion indicando que el mensaje ha sido enviado</div>
+<div class="step">And se debe seleccionar la opcion Cuenta de Google</div>
+<div class="step">And voy a ingresar a la opcion Cerrar sesion</div>
 <table>
 <thead>
 <tr>
-<th>correo</th><th>pass</th><th>destinatario</th><th>asunto</th><th>descripcion</th><th>mensaje</th></tr>
+<th>correoRemitente</th><th>pass</th><th>destinatario</th><th>asunto</th><th>descripcion</th></tr>
 </thead>
 <tbody>
 <tr>
-<td>restrej@gmail.com</td><td>restre</td><td>maribelmendez2790@gmail.com</td><td>prueba emvio y recepcion</td><td>Este es un correo de prueba de envio y recepcion de informacion</td><td>Tu mensaje ha sido enviado. Ver el mensaje</td></tr>
+<td>restrej@gmail.com</td><td>restre</td><td>maribelmendez2790@gmail.com</td><td>prueba envio y recepcion</td><td>Este es un correo de prueba de envio y recepcion de informacion</td></tr>
 </tbody>
 </table>
 
-<h3 class="example">Example: {correo=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba emvio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion, mensaje=Tu mensaje ha sido enviado. Ver el mensaje}</h3>
+<h3 class="example">Example: {correoRemitente=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba envio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion}</h3>
 <div class="step successful">Given estoy cargando el sitioweb de gmail: <span class="step parameter">https://gmail.com</span></div>
 <div class="step successful">When voy a iniciar sesion, con el email <span class="step parameter">restrej@gmail.com</span> y password <span class="step parameter">restre</span></div>
 <div class="step successful">And seleccione la opcion de redactar</div>
-<div class="step successful">And indique el <span class="step parameter">maribelmendez2790@gmail.com</span>, el <span class="step parameter">prueba emvio y recepcion</span> y la <span class="step parameter">Este es un correo de prueba de envio y recepcion de informacion</span> del mensaje</div>
+<div class="step successful">And indique el <span class="step parameter">maribelmendez2790@gmail.com</span>, el <span class="step parameter">prueba envio y recepcion</span> y la <span class="step parameter">Este es un correo de prueba de envio y recepcion de informacion</span> del mensaje</div>
 <div class="step successful">And seleccionar la opcion de enviar</div>
+<div class="step successful">Then debe mostrar una notificacion indicando que el mensaje ha sido enviado</div>
+<div class="step successful">And se debe seleccionar la opcion Cuenta de Google</div>
+<div class="step successful">And voy a ingresar a la opcion Cerrar sesion</div>
+</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Recepci&oacute;n de correo electronico en la bandeja de entrada gmail</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given estoy cargando el sitioweb de gmail: https://gmail.com</div>
+<div class="step">When voy a seleccionar la opcion de usar otra cuenta</div>
+<div class="step">And voy a iniciar sesion con correo destinatario, con el email &lt;correoRemitente&gt; y password &lt;pass&gt;</div>
+<div class="step">Then se debe mostrar el asunto del mensaje y descripcion del cuerpo del mensaje</div>
+<table>
+<thead>
+<tr>
+<th>correoRemitente</th><th>pass</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>maribelmendez2790@gmail.com</td><td>maribel27</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {correoRemitente=maribelmendez2790@gmail.com, pass=maribel27}</h3>
+<div class="step successful">Given estoy cargando el sitioweb de gmail: <span class="step parameter">https://gmail.com</span></div>
+<div class="step successful">When voy a seleccionar la opcion de usar otra cuenta</div>
+<div class="step successful">And voy a iniciar sesion con correo destinatario, con el email <span class="step parameter">maribelmendez2790@gmail.com</span> y password <span class="step parameter">maribel27</span></div>
+<div class="step successful">Then se debe mostrar el asunto del mensaje y descripcion del cuerpo del mensaje</div>
+</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Redacci&oacute;n Correo con copias Cc (Env&iacute;o)</h2>
+<div class="step pending">Given estoy enviando un correo en gmail <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When voy a ingresar un valor existente en el campo &quot;Correo destino&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a seleccionar la opci&oacute;n &quot;Cc&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor existente en el campo &quot;Cc&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar una descripci&oacute;n en  el cuerpo del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And seleccionar enviar <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;estoy enviando un correo en gmail&quot;)
+@Pending
+public void givenEstoyEnviandoUnCorreoEnGmail() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Correo destino\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCorreoDestino() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a seleccionar la opci\u00F3n \&quot;Cc\&quot;&quot;)
+@Pending
+public void whenVoyASeleccionarLaOpci&oacute;nCc() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Cc\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCc() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor en el campo \&quot;Asunto\&quot; del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnValorEnElCampoAsuntoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar una descripci\u00F3n en  el cuerpo del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnaDescripci&oacute;nEnElCuerpoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;seleccionar enviar&quot;)
+@Pending
+public void whenSeleccionarEnviar() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;se debe mostrar correctamente el mensaje \&quot;Tu mensaje ha sido enviado. Ver el mensaje&quot;)
+@Pending
+public void thenSeDebeMostrarCorrectamenteElMensajeTuMensajeHaSidoEnviadoVerElMensaje() {
+  // PENDING
+}
+</pre></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Redacci&oacute;n Correo con copia Oculta Cco (Env&iacute;o)</h2>
+<div class="step pending">Given estoy enviando un correo en gmail <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When voy a ingresar un valor existente en el campo &quot;Correo destino&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a Seleccionar la opci&oacute;n &quot;Cco&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor existente en el campo &quot;Cco&quot;&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar una descripci&oacute;n en  el cuerpo del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And seleccionar enviar <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;estoy enviando un correo en gmail&quot;)
+@Pending
+public void givenEstoyEnviandoUnCorreoEnGmail() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Correo destino\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCorreoDestino() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a Seleccionar la opci\u00F3n \&quot;Cco\&quot;&quot;)
+@Pending
+public void whenVoyASeleccionarLaOpci&oacute;nCco() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Cco\&quot;\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCco() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor en el campo \&quot;Asunto\&quot; del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnValorEnElCampoAsuntoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar una descripci\u00F3n en  el cuerpo del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnaDescripci&oacute;nEnElCuerpoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;seleccionar enviar&quot;)
+@Pending
+public void whenSeleccionarEnviar() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;se debe mostrar correctamente el mensaje \&quot;Tu mensaje ha sido enviado. Ver el mensaje&quot;)
+@Pending
+public void thenSeDebeMostrarCorrectamenteElMensajeTuMensajeHaSidoEnviadoVerElMensaje() {
+  // PENDING
+}
+</pre></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Redacci&oacute;n Correo con dato adjunto (Env&iacute;o)</h2>
+<div class="step pending">Given estoy enviando un correo en gmail <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When voy a ingresar un valor existente en el campo &quot;Correo destino&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar una descripci&oacute;n en  el cuerpo del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And Seleccionar la opci&oacute;n &quot;Adjuntar Archivos&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And seleccionar enviar <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;estoy enviando un correo en gmail&quot;)
+@Pending
+public void givenEstoyEnviandoUnCorreoEnGmail() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Correo destino\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCorreoDestino() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor en el campo \&quot;Asunto\&quot; del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnValorEnElCampoAsuntoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar una descripci\u00F3n en  el cuerpo del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnaDescripci&oacute;nEnElCuerpoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;Seleccionar la opci\u00F3n \&quot;Adjuntar Archivos\&quot;&quot;)
+@Pending
+public void whenSeleccionarLaOpci&oacute;nAdjuntarArchivos() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;seleccionar enviar&quot;)
+@Pending
+public void whenSeleccionarEnviar() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;se debe mostrar correctamente el mensaje \&quot;Tu mensaje ha sido enviado. Ver el mensaje&quot;)
+@Pending
+public void thenSeDebeMostrarCorrectamenteElMensajeTuMensajeHaSidoEnviadoVerElMensaje() {
+  // PENDING
+}
+</pre></div>
+</div>
+<div class="scenario">
+<h2>Scenario: Redacci&oacute;n Correo (Env&iacute;o en borrador)</h2>
+<div class="step pending">Given estoy enviando un correo en gmail <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">When voy a ingresar un valor existente en el campo &quot;Correo destino&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And voy a ingresar una descripci&oacute;n en  el cuerpo del mensaje <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And seleccionar la opci&oacute;n &quot;Guardar y cerrar&quot; <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">And seleccionar enviar <span class="keyword pending">(PENDING)</span></div>
+<div class="step pending">Then se debe mostrar la informaci&oacute;n del mensaje No enviado. En la bandeja de borradores <span class="keyword pending">(PENDING)</span></div>
+<div><pre class="pending">@Given(&quot;estoy enviando un correo en gmail&quot;)
+@Pending
+public void givenEstoyEnviandoUnCorreoEnGmail() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor existente en el campo \&quot;Correo destino\&quot;&quot;)
+@Pending
+public void whenVoyAIngresarUnValorExistenteEnElCampoCorreoDestino() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar un valor en el campo \&quot;Asunto\&quot; del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnValorEnElCampoAsuntoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;voy a ingresar una descripci\u00F3n en  el cuerpo del mensaje&quot;)
+@Pending
+public void whenVoyAIngresarUnaDescripci&oacute;nEnElCuerpoDelMensaje() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;seleccionar la opci\u00F3n \&quot;Guardar y cerrar\&quot;&quot;)
+@Pending
+public void whenSeleccionarLaOpci&oacute;nGuardarYCerrar() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@When(&quot;seleccionar enviar&quot;)
+@Pending
+public void whenSeleccionarEnviar() {
+  // PENDING
+}
+</pre></div>
+<div><pre class="pending">@Then(&quot;se debe mostrar la informaci\u00F3n del mensaje No enviado. En la bandeja de borradores&quot;)
+@Pending
+public void thenSeDebeMostrarLaInformaci&oacute;nDelMensajeNoEnviadoEnLaBandejaDeBorradores() {
+  // PENDING
+}
+</pre></div>
+</div>
+</div>

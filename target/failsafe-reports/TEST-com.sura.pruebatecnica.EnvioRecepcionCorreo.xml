@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.sura.pruebatecnica.EnvioRecepcionCorreo" time="57.145" tests="51" errors="0" skipped="30" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\bin"/>
+    <property name="java.vm.version" value="25.152-b16"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\proyectoBDD"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CO"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\proyectoBDD"/>
+    <property name="java.runtime.version" value="1.8.0_152-b16"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\JUANCA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Program Files\apache-maven-3.5.2\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_152\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\HP\Unified Functional Testing\bin;C:\Program Files\Java\jdk1.8.0_152;C:\Program Files (x86)\SQLServer\100\Tools\Binn\;C:\Program Files (x86)\SQLServer\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\apache-maven-3.5.2\bin;C:\Program Files\Git\cmd;C:\Users\Juan Carlos\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="maven.conf" value="C:\Program Files\apache-maven-3.5.2\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Program Files\apache-maven-3.5.2\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\Juan Carlos"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="Juan Carlos"/>
+    <property name="java.class.path" value="C:\Program Files\apache-maven-3.5.2\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_152\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_152"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp850"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\apache-maven-3.5.2\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp850"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="BeforeStories" classname="java.lang.Object" time="0.025"/>
+  <testcase name="Given estoy cargando el sitioweb de gmail: https://gmail.com" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="8.18"/>
+  <testcase name="When voy a iniciar sesion, con el email &lt;correoRemitente&gt; y password &lt;pass&gt;" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="9.042"/>
+  <testcase name="And seleccione la opcion de redactar" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="6.161"/>
+  <testcase name="And indique el &lt;destinatario&gt;, el &lt;asunto&gt; y la &lt;descripcion&gt; del mensaje" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="4.366"/>
+  <testcase name="And seleccionar la opcion de enviar" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="1.837"/>
+  <testcase name="Then debe mostrar una notificacion indicando que el mensaje ha sido enviado" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="0.737"/>
+  <testcase name="And se debe seleccionar la opcion Cuenta de Google" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="1.603"/>
+  <testcase name="And voy a ingresar a la opcion Cerrar sesion" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="3.708"/>
+  <testcase name="Scenario: Loguin al servidor de correo gmail para |envío y recepción| de información" classname="Scenario: Loguin al servidor de correo gmail para |envío y recepción| de información" time="3.752"/>
+  <testcase name="Given estoy cargando el sitioweb de gmail: https://gmail.com​" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="1.633"/>
+  <testcase name="When voy a seleccionar la opcion de usar otra cuenta" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="1.64"/>
+  <testcase name="And voy a iniciar sesion con correo destinatario, con el email &lt;correoRemitente&gt; y password &lt;pass&gt;" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="5.802"/>
+  <testcase name="Then se debe mostrar el asunto del mensaje y descripcion del cuerpo del mensaje" classname="com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions" time="0.913"/>
+  <testcase name="Scenario: Recepción de correo electronico en la bandeja de entrada gmail" classname="Scenario: Recepción de correo electronico en la bandeja de entrada gmail" time="0.918"/>
+  <testcase name="[PENDING] Given estoy enviando un correo en gmail" classname="[PENDING] Given estoy enviando un correo en gmail" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+Scenario: Redacción Correo con copias Cc (Envío)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;" classname="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[Given estoy enviando un correo en gmail (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a seleccionar la opción &quot;Cc&quot;" classname="[PENDING] And voy a seleccionar la opción &quot;Cc&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[When voy a ingresar un valor existente en el campo "Correo destino" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor existente en el campo &quot;Cc&quot;" classname="[PENDING] And voy a ingresar un valor existente en el campo &quot;Cc&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a seleccionar la opción "Cc" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje" classname="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor existente en el campo "Cc" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje" classname="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor en el campo "Asunto" del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And seleccionar enviar" classname="[PENDING] And seleccionar enviar" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar una descripción en  el cuerpo del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje" classname="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje" time="0">
+    <skipped/>
+    <system-out><![CDATA[And seleccionar enviar (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Redacción Correo con copias Cc |Envío|" classname="Scenario: Redacción Correo con copias Cc |Envío|" time="0.077"/>
+  <testcase name="[PENDING] Given estoy enviando un correo en gmail​" classname="[PENDING] Given estoy enviando un correo en gmail​" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+Scenario: Redacción Correo con copia Oculta Cco (Envío)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​" classname="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​" time="0">
+    <skipped/>
+    <system-out><![CDATA[Given estoy enviando un correo en gmail (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a Seleccionar la opción &quot;Cco&quot;" classname="[PENDING] And voy a Seleccionar la opción &quot;Cco&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[When voy a ingresar un valor existente en el campo "Correo destino" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor existente en el campo &quot;Cco&quot;&quot;" classname="[PENDING] And voy a ingresar un valor existente en el campo &quot;Cco&quot;&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a Seleccionar la opción "Cco" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​" classname="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor existente en el campo "Cco"" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​" classname="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor en el campo "Asunto" del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And seleccionar enviar​" classname="[PENDING] And seleccionar enviar​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar una descripción en  el cuerpo del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje​" classname="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And seleccionar enviar (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Redacción Correo con copia Oculta Cco |Envío|" classname="Scenario: Redacción Correo con copia Oculta Cco |Envío|" time="0.057"/>
+  <testcase name="[PENDING] Given estoy enviando un correo en gmail​​" classname="[PENDING] Given estoy enviando un correo en gmail​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+Scenario: Redacción Correo con dato adjunto (Envío)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​​" classname="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[Given estoy enviando un correo en gmail (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​​" classname="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[When voy a ingresar un valor existente en el campo "Correo destino" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​​" classname="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor en el campo "Asunto" del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And Seleccionar la opción &quot;Adjuntar Archivos&quot;" classname="[PENDING] And Seleccionar la opción &quot;Adjuntar Archivos&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar una descripción en  el cuerpo del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And seleccionar enviar​​" classname="[PENDING] And seleccionar enviar​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And Seleccionar la opción "Adjuntar Archivos" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje​​" classname="[PENDING] Then se debe mostrar correctamente el mensaje &quot;Tu mensaje ha sido enviado. Ver el mensaje​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And seleccionar enviar (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Redacción Correo con dato adjunto |Envío|" classname="Scenario: Redacción Correo con dato adjunto |Envío|" time="0.046"/>
+  <testcase name="[PENDING] Given estoy enviando un correo en gmail​​​" classname="[PENDING] Given estoy enviando un correo en gmail​​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+Scenario: Redacción Correo (Envío en borrador)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​​​" classname="[PENDING] When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;​​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[Given estoy enviando un correo en gmail (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​​​" classname="[PENDING] And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje​​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[When voy a ingresar un valor existente en el campo "Correo destino" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​​​" classname="[PENDING] And voy a ingresar una descripción en  el cuerpo del mensaje​​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar un valor en el campo "Asunto" del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And seleccionar la opción &quot;Guardar y cerrar&quot;" classname="[PENDING] And seleccionar la opción &quot;Guardar y cerrar&quot;" time="0">
+    <skipped/>
+    <system-out><![CDATA[And voy a ingresar una descripción en  el cuerpo del mensaje (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] And seleccionar enviar​​​" classname="[PENDING] And seleccionar enviar​​​" time="0">
+    <skipped/>
+    <system-out><![CDATA[And seleccionar la opción "Guardar y cerrar" (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="[PENDING] Then se debe mostrar la información del mensaje No enviado. En la bandeja de borradores" classname="[PENDING] Then se debe mostrar la información del mensaje No enviado. En la bandeja de borradores" time="0">
+    <skipped/>
+    <system-out><![CDATA[And seleccionar enviar (PENDING)
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Redacción Correo |Envío en borrador|" classname="Scenario: Redacción Correo |Envío en borrador|" time="0.076"/>
+  <testcase name="envio_recepcion_correo.story" classname="envio_recepcion_correo.story" time="0.133"/>
+  <testcase name="AfterStories" classname="java.lang.Object" time="2.253"/>
+</testsuite>

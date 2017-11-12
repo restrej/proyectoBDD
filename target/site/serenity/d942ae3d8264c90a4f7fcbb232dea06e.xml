@@ -1,0 +1,28 @@
+<acceptance-test-run title="Redacción Correo (Envío en borrador)" name="Redacción Correo (Envío en borrador)" steps="7" successful="0" failures="0" skipped="0" ignored="0" pending="7" annotated-result="PENDING" result="PENDING" duration="20" timestamp="2017-11-12T01:33:09.445-05:00" manual="true" session-id="7133ef443ae227e294366e5d75734145">
+  <user-story id="envio_recepcion_correo" name="Envio recepcion correo" path="stories.pruebatecnica/envio_recepcion_correo.story"/>
+  <tags>
+    <tag name="Manual" type="External Tests"/>
+    <tag name="Envio recepcion correo" type="story"/>
+  </tags>
+  <test-step result="PENDING" duration="0">
+    <description>Given estoy enviando un correo en gmail</description>
+  </test-step>
+  <test-step result="PENDING" duration="1">
+    <description>When voy a ingresar un valor existente en el campo &quot;Correo destino&quot;</description>
+  </test-step>
+  <test-step result="PENDING" duration="1">
+    <description>And voy a ingresar un valor en el campo &quot;Asunto&quot; del mensaje</description>
+  </test-step>
+  <test-step result="PENDING" duration="0">
+    <description>And voy a ingresar una descripción en  el cuerpo del mensaje</description>
+  </test-step>
+  <test-step result="PENDING" duration="1">
+    <description>And seleccionar la opción &quot;Guardar y cerrar&quot;</description>
+  </test-step>
+  <test-step result="PENDING" duration="0">
+    <description>And seleccionar enviar</description>
+  </test-step>
+  <test-step result="PENDING" duration="0">
+    <description>Then se debe mostrar la información del mensaje No enviado. En la bandeja de borradores</description>
+  </test-step>
+</acceptance-test-run>

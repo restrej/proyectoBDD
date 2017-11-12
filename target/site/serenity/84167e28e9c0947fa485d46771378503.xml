@@ -1,4 +1,4 @@
-<acceptance-test-run title="Loguin al servidor de correo Gmail para (envío y recepción) de información" name="Loguin al servidor de correo Gmail para (envío y recepción) de información" steps="6" successful="5" failures="0" errors="1" skipped="0" ignored="0" pending="0" annotated-result="ERROR" result="ERROR" duration="53723" timestamp="2017-11-10T20:03:36.844-05:00" session-id="660138f3d4e6a161ebeba577ce68b546">
+<acceptance-test-run title="Loguin al servidor de correo gmail para (envío y recepción) de información" name="Loguin al servidor de correo gmail para (envío y recepción) de información" steps="8" successful="8" failures="0" skipped="0" ignored="0" pending="0" result="SUCCESS" duration="34080" timestamp="2017-11-12T01:32:23.319-05:00" session-id="7133ef443ae227e294366e5d75734145">
   <user-story id="envio_recepcion_correo" name="Envio recepcion correo" path="stories.pruebatecnica/envio_recepcion_correo.story"/>
   <tags>
     <tag name="Envio recepcion correo" type="story"/>
@@ -8,95 +8,104 @@
       <dataset startRow="0" rowCount="0"/>
     </datasets>
     <headers>
-      <header>correo</header>
+      <header>correoRemitente</header>
       <header>pass</header>
       <header>destinatario</header>
       <header>asunto</header>
       <header>descripcion</header>
-      <header>mensaje</header>
     </headers>
     <rows>
-      <row result="ERROR">
+      <row result="SUCCESS">
         <value>restrej@gmail.com</value>
         <value>restre</value>
         <value>maribelmendez2790@gmail.com</value>
-        <value>prueba emvio y recepcion</value>
+        <value>prueba envio y recepcion</value>
         <value>Este es un correo de prueba de envio y recepcion de informacion</value>
-        <value>Tu mensaje ha sido enviado. Ver el mensaje</value>
       </row>
     </rows>
   </examples>
-  <test-group name="[1] {correo=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba emvio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion, mensaje=Tu mensaje ha sido enviado. Ver el mensaje}" result="ERROR">
+  <test-group name="[1] {correoRemitente=restrej@gmail.com, pass=restre, destinatario=maribelmendez2790@gmail.com, asunto=prueba envio y recepcion, descripcion=Este es un correo de prueba de envio y recepcion de informacion}" result="SUCCESS">
     <test-group name="Given estoy cargando el sitioweb de gmail: {https://gmail.com}" result="SUCCESS">
       <screenshots>
-        <screenshot image="757bf552a061ba3d70400dc9cfc7d3c8.png"/>
+        <screenshot image="dfd5a347a9de59b36a65f8cee56fa4cb.png"/>
       </screenshots>
-      <test-step result="SUCCESS" duration="12202">
+      <test-step result="SUCCESS" duration="7440">
         <screenshots>
-          <screenshot image="c7224cb87df5a6d905e772dc917f721e.png"/>
+          <screenshot image="d2364e5d877d9389fbda56c7126d81da.png"/>
         </screenshots>
         <description>Acceso aplicativo correo: https://gmail.com</description>
       </test-step>
     </test-group>
     <test-group name="When voy a iniciar sesion, con el email {restrej@gmail.com} y password {restre}" result="SUCCESS">
       <screenshots>
-        <screenshot image="7c4cbc69a83df46e7445ef6607a2451f.png"/>
+        <screenshot image="05dd4f991b9722685b845ea43482d265.png"/>
       </screenshots>
-      <test-step result="SUCCESS" duration="1339">
+      <test-step result="SUCCESS" duration="1794">
         <screenshots>
-          <screenshot image="019170958c384288c2eef09943b1789c.png"/>
+          <screenshot image="d03a7535185a2ce41bfca1dceb398a7c.png"/>
         </screenshots>
         <description>Inicio de sesion: restrej@gmail.com, restre</description>
       </test-step>
     </test-group>
     <test-group name="And seleccione la opcion de redactar" result="SUCCESS">
       <screenshots>
-        <screenshot image="3f7217ddb4bd9fa8d7976600529b1294.png"/>
+        <screenshot image="4bf4a995e18459e79645cad8b76093ce.png"/>
       </screenshots>
-      <test-step result="SUCCESS" duration="1611">
+      <test-step result="SUCCESS" duration="3123">
         <screenshots>
-          <screenshot image="9a1b193db2724cae458d40b37e98d044.png"/>
+          <screenshot image="2b668ad9984ab8521c1ea2212fda867d.png"/>
         </screenshots>
         <description>Redactar correo</description>
       </test-step>
     </test-group>
-    <test-group name="And indique el {maribelmendez2790@gmail.com}, el {prueba emvio y recepcion} y la {Este es un correo de prueba de envio y recepcion de informacion} del mensaje" result="SUCCESS">
+    <test-group name="And indique el {maribelmendez2790@gmail.com}, el {prueba envio y recepcion} y la {Este es un correo de prueba de envio y recepcion de informacion} del mensaje" result="SUCCESS">
       <screenshots>
-        <screenshot image="672e41099ce6c38f2144b3ad80dd2b53.png"/>
+        <screenshot image="8ae2b86617b2052683e49b04255071ab.png"/>
       </screenshots>
-      <test-step result="SUCCESS" duration="4832">
+      <test-step result="SUCCESS" duration="3692">
         <screenshots>
-          <screenshot image="dd25b084883c81986c1d6372a28d4746.png"/>
+          <screenshot image="5f3390589a8c97618ddf7945139d6d7f.png"/>
         </screenshots>
-        <description>Datos correo: maribelmendez2790@gmail.com, prueba emvio y recepcion, Este es un correo de prueba de envio y recepcion de informacion</description>
+        <description>Datos correo: maribelmendez2790@gmail.com, prueba envio y recepcion, Este es un correo de prueba de envio y recepcion de informacion</description>
       </test-step>
     </test-group>
     <test-group name="And seleccionar la opcion de enviar" result="SUCCESS">
       <screenshots>
-        <screenshot image="04c49923311ac0da0f3a448f60bf14f7.png"/>
+        <screenshot image="48707c282248fd6de626f8d7bd8a1ab2.png"/>
       </screenshots>
-      <test-step result="SUCCESS" duration="966">
+      <test-step result="SUCCESS" duration="1077">
         <screenshots>
-          <screenshot image="be3b4bc843b02e70da2437f8c7ffceb1.png"/>
+          <screenshot image="238d4c912477fc7748aef65c5736c656.png"/>
         </screenshots>
         <description>Enviar correo</description>
       </test-step>
     </test-group>
-    <test-group name="Then debe mostrar un mensaje ｟Tu mensaje ha sido enviado. Ver el mensaje｠ indicando que el correo ha sido enviado" result="ERROR">
-      <test-step result="ERROR" duration="17416">
+    <test-step result="SUCCESS" duration="730">
+      <screenshots>
+        <screenshot image="48707c282248fd6de626f8d7bd8a1ab2.png"/>
+      </screenshots>
+      <description>Then debe mostrar una notificacion indicando que el mensaje ha sido enviado</description>
+    </test-step>
+    <test-group name="And se debe seleccionar la opcion Cuenta de Google" result="SUCCESS">
+      <screenshots>
+        <screenshot image="8b5ecaa535a706d7a73826fe0643281a.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="918">
         <screenshots>
-          <screenshot image="04c49923311ac0da0f3a448f60bf14f7.png" source="pagesource1373149382497714691.html.txt"/>
+          <screenshot image="092211d2f6369e8d8946a1bd6013a7e5.png"/>
         </screenshots>
-        <description>Validar mensaje correo: Tu mensaje ha sido enviado. Ver el mensaje</description>
-        <error>org.openqa.selenium.TimeoutException: Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: unknown</error>
-        <exception>org.openqa.selenium.TimeoutException:Timed out after 16000 milliseconds: net.serenitybdd.core.pages.RenderedPageObjectView$2@651fe169
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;QV22&apos;, ip: &apos;10.214.18.142&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
-Driver info: driver.version: unknown&#xd;
-[com.sura.pruebatecnica.correoelectronico.pages.IngresoSitioWebPages.validarMensajeCorreo(IngresoSitioWebPages.java:78), com.sura.pruebatecnica.correoelectronico.steps.IngresoSitioWebSteps.validarMensajeCorreo(IngresoSitioWebSteps.java:40), com.sura.pruebatecnica.correoelectronico.definitions.IngresoSitioWebDefinitions.validarMensajeCorreo(IngresoSitioWebDefinitions.java:40)]</exception>
+        <description>Opcion cuenta google</description>
+      </test-step>
+    </test-group>
+    <test-group name="And voy a ingresar a la opcion Cerrar sesion" result="SUCCESS">
+      <screenshots>
+        <screenshot image="edf668dac8193b6da368cabfdf151acd.png"/>
+      </screenshots>
+      <test-step result="SUCCESS" duration="2875">
+        <screenshots>
+          <screenshot image="fe9ba4219f92af76da322044b6103f73.png"/>
+        </screenshots>
+        <description>Cerrar sesion</description>
       </test-step>
     </test-group>
   </test-group>
